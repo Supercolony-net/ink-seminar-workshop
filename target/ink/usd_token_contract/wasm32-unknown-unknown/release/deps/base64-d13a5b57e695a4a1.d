@@ -1,0 +1,12 @@
+/home/p/Documents/Supercolony/seminar_dex/target/ink/usd_token_contract/wasm32-unknown-unknown/release/deps/base64-d13a5b57e695a4a1.rmeta: /home/p/.cargo/registry/src/github.com-1ecc6299db9ec823/base64-0.13.0/src/lib.rs /home/p/.cargo/registry/src/github.com-1ecc6299db9ec823/base64-0.13.0/src/chunked_encoder.rs /home/p/.cargo/registry/src/github.com-1ecc6299db9ec823/base64-0.13.0/src/display.rs /home/p/.cargo/registry/src/github.com-1ecc6299db9ec823/base64-0.13.0/src/tables.rs /home/p/.cargo/registry/src/github.com-1ecc6299db9ec823/base64-0.13.0/src/encode.rs /home/p/.cargo/registry/src/github.com-1ecc6299db9ec823/base64-0.13.0/src/decode.rs
+
+/home/p/Documents/Supercolony/seminar_dex/target/ink/usd_token_contract/wasm32-unknown-unknown/release/deps/libbase64-d13a5b57e695a4a1.rlib: /home/p/.cargo/registry/src/github.com-1ecc6299db9ec823/base64-0.13.0/src/lib.rs /home/p/.cargo/registry/src/github.com-1ecc6299db9ec823/base64-0.13.0/src/chunked_encoder.rs /home/p/.cargo/registry/src/github.com-1ecc6299db9ec823/base64-0.13.0/src/display.rs /home/p/.cargo/registry/src/github.com-1ecc6299db9ec823/base64-0.13.0/src/tables.rs /home/p/.cargo/registry/src/github.com-1ecc6299db9ec823/base64-0.13.0/src/encode.rs /home/p/.cargo/registry/src/github.com-1ecc6299db9ec823/base64-0.13.0/src/decode.rs
+
+/home/p/Documents/Supercolony/seminar_dex/target/ink/usd_token_contract/wasm32-unknown-unknown/release/deps/base64-d13a5b57e695a4a1.d: /home/p/.cargo/registry/src/github.com-1ecc6299db9ec823/base64-0.13.0/src/lib.rs /home/p/.cargo/registry/src/github.com-1ecc6299db9ec823/base64-0.13.0/src/chunked_encoder.rs /home/p/.cargo/registry/src/github.com-1ecc6299db9ec823/base64-0.13.0/src/display.rs /home/p/.cargo/registry/src/github.com-1ecc6299db9ec823/base64-0.13.0/src/tables.rs /home/p/.cargo/registry/src/github.com-1ecc6299db9ec823/base64-0.13.0/src/encode.rs /home/p/.cargo/registry/src/github.com-1ecc6299db9ec823/base64-0.13.0/src/decode.rs
+
+/home/p/.cargo/registry/src/github.com-1ecc6299db9ec823/base64-0.13.0/src/lib.rs:
+/home/p/.cargo/registry/src/github.com-1ecc6299db9ec823/base64-0.13.0/src/chunked_encoder.rs:
+/home/p/.cargo/registry/src/github.com-1ecc6299db9ec823/base64-0.13.0/src/display.rs:
+/home/p/.cargo/registry/src/github.com-1ecc6299db9ec823/base64-0.13.0/src/tables.rs:
+/home/p/.cargo/registry/src/github.com-1ecc6299db9ec823/base64-0.13.0/src/encode.rs:
+/home/p/.cargo/registry/src/github.com-1ecc6299db9ec823/base64-0.13.0/src/decode.rs:

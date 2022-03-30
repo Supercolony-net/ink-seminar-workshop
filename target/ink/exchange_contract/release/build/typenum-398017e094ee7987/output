@@ -1,0 +1,2 @@
+cargo:rustc-env=TYPENUM_BUILD_CONSTS=/home/p/Documents/Supercolony/seminar_dex/target/ink/exchange_contract/release/build/typenum-398017e094ee7987/out/consts.rs
+cargo:rustc-env=TYPENUM_BUILD_OP=/home/p/Documents/Supercolony/seminar_dex/target/ink/exchange_contract/release/build/typenum-398017e094ee7987/out/op.rs

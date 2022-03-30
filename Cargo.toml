@@ -1,0 +1,8 @@
+[workspace]
+members = [
+    "contracts/contracts/usd_token",
+    "contracts/contracts/exchange",
+]
+exclude = [
+    "contracts"
+]

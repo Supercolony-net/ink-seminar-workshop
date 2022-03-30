@@ -1,0 +1,21 @@
+[package]
+name = "dex_derive"
+version = "0.1.0"
+authors = ["Supercolony <pierre.ossun@supercolony.net>"]
+edition = "2021"
+
+[dependencies]
+syn = { version = "1.0" }
+quote = "1.0"
+proc-macro2 = "1"
+
+brush_derive = { tag = "v1.5.0", git = "https://github.com/Supercolony-net/openbrush-contracts", default-features = false }
+
+[lib]
+name = "dex_derive"
+path = "lib.rs"
+proc-macro = true
+
+[features]
+default = ["std"]
+std = []
