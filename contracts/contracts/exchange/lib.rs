@@ -3,7 +3,13 @@
 
 #[brush::contract]
 pub mod exchange {
-    use dex::impls::exchange_data::*;
+    use dex::{
+        impls::{
+            exchange::*,
+            exchange_data::*,
+        },
+        traits::exchange::*,
+    };
     use ink_storage::traits::SpreadAllocate;
 
     #[ink(storage)]
@@ -13,17 +19,14 @@ pub mod exchange {
         exchange: ExchangeStruct,
     }
 
+    impl Exchange for ExchangeContract {}
+
     impl ExchangeContract {
         #[ink(constructor)]
         pub fn new() -> Self {
             ink_lang::codegen::initialize_contract(|instance: &mut ExchangeContract| {
-                instance.exchange.ex = true;
+                instance.exchange.total_liquidity = 0;
             })
-        }
-
-        #[ink(message)]
-        pub fn get_bool(&self) -> bool {
-            self.exchange.ex
         }
     }
 }
