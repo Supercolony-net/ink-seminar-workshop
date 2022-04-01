@@ -8,8 +8,9 @@ pub mod exchange {
             exchange::*,
             exchange_data::*,
         },
-        traits::exchange::*,
+        traits::usd_token::UsdTokenRef,
     };
+    use ink_prelude::vec::Vec;
     use ink_storage::traits::SpreadAllocate;
 
     #[ink(storage)]
@@ -21,10 +22,13 @@ pub mod exchange {
 
     impl Exchange for ExchangeContract {}
 
+    impl ExchangeData for ExchangeContract {}
+
     impl ExchangeContract {
         #[ink(constructor)]
-        pub fn new() -> Self {
+        pub fn new(usd_token: AccountId) -> Self {
             ink_lang::codegen::initialize_contract(|instance: &mut ExchangeContract| {
+                instance.exchange.usd_token = usd_token;
                 instance.exchange.total_liquidity = 0;
             })
         }
