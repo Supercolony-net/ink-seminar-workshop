@@ -3,14 +3,10 @@
 
 #[brush::contract]
 pub mod exchange {
-    use dex::{
-        impls::{
-            exchange::*,
-            exchange_data::*,
-        },
-        traits::usd_token::UsdTokenRef,
+    use dex::impls::{
+        exchange::*,
+        exchange_data::*,
     };
-    use ink_prelude::vec::Vec;
     use ink_storage::traits::SpreadAllocate;
 
     #[ink(storage)]

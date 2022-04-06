@@ -15,7 +15,7 @@ impl<T: ExchangeStorage> Exchange for T {
             .balance()
             .checked_sub(transfered_value)
             .ok_or(ExchangeError::SubUnderflow)?;
-        let tokens_bought = self._price(transfered_value, input_reserve, token_reserve)?;
+        let tokens_bought = self.price(transfered_value, input_reserve, token_reserve)?;
         UsdTokenRef::transfer(&self.get().usd_token, caller, tokens_bought, Vec::<u8>::new())?;
         Ok(tokens_bought)
     }
@@ -23,14 +23,14 @@ impl<T: ExchangeStorage> Exchange for T {
     default fn token_to_native(&mut self, token_amount: u128) -> Result<u128, ExchangeError> {
         let caller = Self::env().caller();
         let token_reserve = UsdTokenRef::balance_of(&self.get().usd_token, caller);
-        let native_bought = self._price(token_amount, token_reserve, Self::env().balance())?;
+        let native_bought = self.price(token_amount, token_reserve, Self::env().balance())?;
         if Self::env().transfer(caller, token_amount).is_err() {
             return Err(ExchangeError::NativeTransferFailed)
         }
         Ok(native_bought)
     }
 
-    default fn _price(
+    default fn price(
         &self,
         input_amount: u128,
         input_reserve: u128,

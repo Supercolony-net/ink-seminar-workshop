@@ -22,7 +22,14 @@ pub trait Exchange {
     #[ink(message)]
     fn token_to_native(&mut self, token_amount: u128) -> Result<u128, ExchangeError>;
 
-    fn _price(&self, input_amount: u128, input_reserve: u128, output_reserve: u128) -> Result<u128, ExchangeError>;
+    #[ink(message, payable)]
+    fn deposit(&mut self) -> Result<u128, ExchangeError>;
+
+    #[ink(message)]
+    fn withdraw(&mut self, amount: u128) -> Result<(u128, u128), ExchangeError>;
+
+    #[ink(message)]
+    fn price(&self, input_amount: u128, input_reserve: u128, output_reserve: u128) -> Result<u128, ExchangeError>;
 }
 
 #[brush::trait_definition]

@@ -3,6 +3,7 @@ use brush::{
     declare_storage_trait,
     traits::AccountId,
 };
+use ink_env::CallFlags;
 use ink_prelude::vec::Vec;
 use ink_storage::{
     traits::{
@@ -47,13 +48,15 @@ impl<T: ExchangeStorage> ExchangeData for T {
     fn init(&mut self, token_amount: u128) -> Result<u128, ExchangeError> {
         let caller = Self::env().caller();
         let total_liquidity = Self::env().transferred_value();
-        UsdTokenRef::transfer_from(
+        UsdTokenRef::transfer_from_builder(
             &self.get().usd_token,
             caller,
             Self::env().account_id(),
             token_amount,
             Vec::<u8>::new(),
-        )?;
+        )
+        .call_flags(CallFlags::default().set_allow_reentry(true))
+        .fire();
         self.get_mut().total_liquidity = total_liquidity;
         self.get_mut().liquidity.insert(caller, &total_liquidity);
         Ok(total_liquidity)
