@@ -56,7 +56,8 @@ impl<T: ExchangeStorage> ExchangeData for T {
             Vec::<u8>::new(),
         )
         .call_flags(CallFlags::default().set_allow_reentry(true))
-        .fire();
+        .fire()
+        .unwrap()?;
         self.get_mut().total_liquidity = total_liquidity;
         self.get_mut().liquidity.insert(caller, &total_liquidity);
         Ok(total_liquidity)

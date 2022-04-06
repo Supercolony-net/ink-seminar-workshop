@@ -3,10 +3,9 @@
 
 #[brush::contract]
 pub mod usd_token {
-    use dex::impls::usd_token::*;
     use brush::contracts::psp22::extensions::metadata::*;
-    use ink_storage::traits::SpreadAllocate;
     use ink_prelude::string::String;
+    use ink_storage::traits::SpreadAllocate;
 
     #[ink(storage)]
     #[derive(Default, SpreadAllocate, PSP22Storage, PSP22MetadataStorage)]
@@ -29,7 +28,7 @@ pub mod usd_token {
             ink_lang::codegen::initialize_contract(|instance: &mut UsdTokenContract| {
                 instance.metadata.name = Some(String::from("USD TOKEN"));
                 instance.metadata.symbol = Some(String::from("USD"));
-                instance.metadata.decimals = 10;
+                instance.metadata.decimals = 12;
                 instance
                     ._mint(instance.env().caller(), total_supply)
                     .expect("Should mint");
