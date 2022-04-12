@@ -9,8 +9,7 @@
 ├── impls
 │   ├── mod.rs
 │   ├── exchange.rs
-│   ├── exchange_data.rs
-│   └── usd_token.rs
+│   └── exchange_data.rs
 ├── traits
 │   ├── mod.rs
 │   ├── exchange.rs
